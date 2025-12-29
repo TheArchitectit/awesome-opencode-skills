@@ -1,11 +1,11 @@
 ---
 name: developer-growth-analysis
-description: Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a personalized growth report to your Slack DMs.
+description: Analyzes your recent OpenCode chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a personalized growth report to your Slack DMs.
 ---
 
 # Developer Growth Analysis
 
-This skill provides personalized feedback on your recent coding work by analyzing your Claude Code chat interactions and identifying patterns that reveal strengths and areas for growth.
+This skill provides personalized feedback on your recent coding work by analyzing your OpenCode chat interactions and identifying patterns that reveal strengths and areas for growth.
 
 ## When to Use This Skill
 
@@ -23,7 +23,7 @@ This skill is ideal for developers who want structured feedback on their growth 
 
 This skill performs a six-step analysis of your development work:
 
-1. **Reads Your Chat History**: Accesses your local Claude Code chat history from the past 24-48 hours to understand what you've been working on.
+1. **Reads Your Chat History**: Accesses your local OpenCode chat history from the past 24-48 hours to understand what you've been working on.
 
 2. **Identifies Development Patterns**: Analyzes the types of problems you're solving, technologies you're using, challenges you encounter, and how you approach different kinds of tasks.
 
@@ -37,10 +37,10 @@ This skill performs a six-step analysis of your development work:
 
 ## How to Use
 
-Ask Claude to analyze your recent coding work:
+Ask OpenCode to analyze your recent coding work:
 
 ```
-Analyze my developer growth from my recent chats
+Analyze my developer growth from my recent OpenCode chats
 ```
 
 Or be more specific about which time period:
@@ -208,7 +208,7 @@ When a user requests analysis of their developer growth or coding patterns from 
 ### Input
 
 ```
-Analyze my developer growth from my recent chats
+Analyze my developer growth from my recent OpenCode chats
 ```
 
 ### Output

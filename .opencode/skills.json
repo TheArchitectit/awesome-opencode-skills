@@ -1,0 +1,62 @@
+{
+  "$schema": "https://opencode.ai/skills.schema.json",
+  "name": "awesome-opencode-skills",
+  "version": "1.0.0",
+  "description": "A curated collection of practical OpenCode Skills for enhancing productivity",
+  "skills": [
+    {
+      "name": "document-skills-docx",
+      "path": "./document-skills/docx",
+      "category": "document-processing",
+      "description": "Skills for working with Microsoft Word documents"
+    },
+    {
+      "name": "document-skills-pdf",
+      "path": "./document-skills/pdf",
+      "category": "document-processing",
+      "description": "Skills for working with PDF documents"
+    },
+    {
+      "name": "document-skills-pptx",
+      "path": "./document-skills/pptx",
+      "category": "document-processing",
+      "description": "Skills for working with PowerPoint presentations"
+    },
+    {
+      "name": "document-skills-xlsx",
+      "path": "./document-skills/xlsx",
+      "category": "document-processing",
+      "description": "Skills for working with Excel spreadsheets"
+    },
+    {
+      "name": "artifacts-builder",
+      "path": "./artifacts-builder",
+      "category": "development",
+      "description": "Build HTML artifacts with React, Tailwind CSS, and shadcn/ui"
+    },
+    {
+      "name": "changelog-generator",
+      "path": "./changelog-generator",
+      "category": "development",
+      "description": "Generate changelogs from git commits"
+    },
+    {
+      "name": "webapp-testing",
+      "path": "./webapp-testing",
+      "category": "development",
+      "description": "Test web applications using Playwright"
+    },
+    {
+      "name": "brand-guidelines",
+      "path": "./brand-guidelines",
+      "category": "business-marketing",
+      "description": "Apply OpenCode branding to artifacts"
+    },
+    {
+      "name": "theme-factory",
+      "path": "./theme-factory",
+      "category": "creative-media",
+      "description": "Apply professional themes to artifacts"
+    }
+  ]
+}

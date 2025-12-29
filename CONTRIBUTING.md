@@ -1,6 +1,6 @@
-# Contributing to Awesome Claude Skills
+# Contributing to Awesome OpenCode Skills
 
-Thank you for your interest in contributing to the premier collection of Claude Skills! This guide will help you add new skills that benefit the entire Claude community.
+Thank you for your interest in contributing to the premier collection of OpenCode Skills! This guide will help you add new skills that benefit the entire OpenCode community.
 
 ## Before You Start
 
@@ -16,9 +16,9 @@ All skills must:
 2. **Be well-documented** - Include clear instructions, examples, and use cases.
 3. **Be accessible** - Written for non-technical users when possible.
 4. **Include examples** - Show practical, real-world usage.
-5. **Be tested** - Verify the skill works across Claude.ai, Claude Code, and/or API.
+5. **Be tested** - Verify the skill works with OpenCode.
 6. **Be safe** - Confirm before destructive operations.
-7. **Be portable** - Work across Claude platforms when applicable.
+7. **Be portable** - Work across OpenCode interfaces when applicable.
 
 ## Skill Structure
 
@@ -51,9 +51,9 @@ Detailed description of the skill and what it helps users accomplish.
 
 ## What This Skill Does
 
-1. **Capability 1**: Description
-2. **Capability 2**: Description
-3. **Capability 3**: Description
+1. **Capability1**: Description
+2. **Capability2**: Description
+3. **Capability3**: Description
 
 ## How to Use
 
@@ -157,11 +157,6 @@ or
 **Credit:** Based on [Company/Team]'s process
 ```
 
-Examples:
-- **Inspired by:** Dan Shipper's meeting analysis workflow
-- **Inspired by:** Teresa Torres's content research process
-- **Credit:** Based on Notion's documentation workflow
-
 ## Skill Categories
 
 ### Business & Marketing
@@ -181,5 +176,4 @@ Skills for organizing files, managing tasks, and personal productivity.
 
 ---
 
-Thank you for contributing to Awesome Claude Skills!
-
+Thank you for contributing to Awesome OpenCode Skills!

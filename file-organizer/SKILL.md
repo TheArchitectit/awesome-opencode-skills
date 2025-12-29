@@ -34,7 +34,7 @@ This skill acts as your personal organization assistant, helping you maintain a 
 cd ~
 ```
 
-Then run Claude Code and ask for help:
+Then run OpenCode and ask for help:
 
 ```
 Help me organize my Downloads folder
@@ -401,7 +401,7 @@ Documents folder.
 3. **Consistent Naming**: Use "YYYY-MM-DD - Description" format for important files
 4. **Archive Aggressively**: Move old projects to Archive instead of deleting
 5. **Keep Active Separate**: Maintain clear boundaries between active and archived work
-6. **Trust the Process**: Let Claude handle the cognitive load of where things go
+6. **Trust the Process**: Let OpenCode handle the cognitive load of where things go
 
 ## Best Practices
 
