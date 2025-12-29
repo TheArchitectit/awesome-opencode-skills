@@ -45,34 +45,20 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 - [pdf](./document-skills/pdf/) - Extract text, tables, metadata, merge & annotate PDFs. 📖 **Comprehensive**
 - [pptx](./document-skills/pptx/) - Read, generate, and adjust slides, layouts, templates. 📄 **Standard**
 - [xlsx](./document-skills/xlsx/) - Spreadsheet manipulation: formulas, charts, data transformations. 📄 **Standard**
-- [Markdown to EPUB Converter](https://github.com/smerchek/claude-epub-skill) - Converts markdown documents and chat summaries into professional EPUB ebook files. 📖 **Comprehensive** *By [@smerchek](https://github.com/smerchek)*
+- More skills coming soon!
 
 ### Development & Code Tools
 
 - [artifacts-builder](./artifacts-builder/) - Suite of tools for creating elaborate, multi-component HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). 📄 **Standard**
-- [aws-skills](https://github.com/zxkane/aws-skills) - AWS development with CDK best practices, cost optimization MCP servers, and serverless/event-driven architecture patterns.
 - [Changelog Generator](./changelog-generator/) - Automatically creates user-facing changelogs from git commits by analyzing history and transforming technical commits into customer-friendly release notes. 📄 **Standard**
-- [D3.js Visualization](https://github.com/chrisvoncsefalvay/claude-d3js-skill) - Teaches AI to produce D3 charts and interactive data visualizations. 📖 **Comprehensive** *By [@chrisvoncsefalvay](https://github.com/chrisvoncsefalvay)*
-- [FFUF Web Fuzzing](https://github.com/jthack/ffuf_claude_skill) - Integrates the ffuf web fuzzer so AI can run fuzzing tasks and analyze results for vulnerabilities. 📖 **Comprehensive** *By [@jthack](https://github.com/jthack)*
-- [finishing-a-development-branch](https://github.com/obra/superpowers/tree/main/skills/finishing-a-development-branch) - Guides completion of development work by presenting clear options and handling chosen workflow.
-- [iOS Simulator](https://github.com/conorluddy/ios-simulator-skill) - Enables AI to interact with iOS Simulator for testing and debugging iOS applications. 📖 **Comprehensive** *By [@conorluddy](https://github.com/conorluddy)*
 - [MCP Builder](./mcp-builder/) - Guides creation of high-quality MCP (Model Context Protocol) servers for integrating external APIs and services with LLMs using Python or TypeScript. 📖 **Comprehensive**
-- [move-code-quality-skill](https://github.com/1NickPappas/move-code-quality-skill) - Analyzes Move language packages against the official Move Book Code Quality Checklist for Move 2024 Edition compliance and best practices.
-- [Playwright Browser Automation](https://github.com/lackeyjb/playwright-skill) - Model-invoked Playwright automation for testing and validating web applications. 📖 **Comprehensive** *By [@lackeyjb](https://github.com/lackeyjb)*
-- [prompt-engineering](https://github.com/NeoLabHQ/context-engineering-kit/tree/master/plugins/customaize-agent/skills/prompt-engineering) - Teaches well-known prompt engineering techniques and patterns, including best practices and agent persuasion principles.
-- [pypict-claude-skill](https://github.com/omkamal/pypict-claude-skill) - Design comprehensive test cases using PICT (Pairwise Independent Combinatorial Testing) for requirements or code, generating optimized test suites with pairwise coverage.
 - [Skill Creator](./skill-creator/) - Provides guidance for creating effective OpenCode Skills that extend capabilities with specialized knowledge, workflows, and tool integrations. 📖 **Comprehensive**
-- [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) - Automatically converts any documentation website into an AI skill in minutes. 📖 **Comprehensive** *By [@yusufkaraaslan](https://github.com/yusufkaraaslan)*
-- [software-architecture](https://github.com/NeoLabHQ/context-engineering-kit/tree/master/plugins/ddd/skills/software-architecture) - Implements design patterns including Clean Architecture, SOLID principles, and comprehensive software design best practices.
-- [subagent-driven-development](https://github.com/NeoLabHQ/context-engineering-kit/tree/master/plugins/sadd/skills/subagent-driven-development) - Dispatches independent subagents for individual tasks with code review checkpoints between iterations for rapid, controlled development.
-- [test-driven-development](https://github.com/obra/superpowers/tree/main/skills/test-driven-development) - Use when implementing any feature or bugfix, before writing implementation code.
-- [using-git-worktrees](https://github.com/obra/superpowers/blob/main/skills/using-git-worktrees/) - Creates isolated git worktrees with smart directory selection and safety verification.
+- More skills coming soon!
 - [Webapp Testing](./webapp-testing/) - Tests local web applications using Playwright for verifying frontend functionality, debugging UI behavior, and capturing screenshots. 📄 **Standard**
 
 ### Data & Analysis
 
-- [CSV Data Summarizer](https://github.com/coffeefuelbump/csv-data-summarizer-claude-skill) - Automatically analyzes CSV files and generates comprehensive insights with visualizations without requiring user prompts. 📖 **Comprehensive** *By [@coffeefuelbump](https://github.com/coffeefuelbump)*
-- [root-cause-tracing](https://github.com/obra/superpowers/tree/main/skills/root-cause-tracing) - Use when errors occur deep in execution and you need to trace back to find the original trigger. 📖 **Comprehensive**
+- More skills coming soon!
 
 ### Business & Marketing
 
@@ -84,12 +70,9 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 
 ### Communication & Writing
 
-- [article-extractor](https://github.com/michalparkola/tapestry-skills-for-claude-code/tree/main/article-extractor) - Extract full article text and metadata from web pages. 📄 **Standard**
-- [brainstorming](https://github.com/obra/superpowers/tree/main/skills/brainstorming) - Transform rough ideas into fully-formed designs through structured questioning and alternative exploration. 📖 **Comprehensive**
 - [Content Research Writer](./content-research-writer/) - Assists in writing high-quality content by conducting research, adding citations, improving hooks, and providing section-by-section feedback. 📖 **Comprehensive**
-- [family-history-research](https://github.com/emaynard/claude-family-history-research-skill) - Provides assistance with planning family history and genealogy research projects. 📖 **Comprehensive**
 - [Meeting Insights Analyzer](./meeting-insights-analyzer/) - Analyzes meeting transcripts to uncover behavioral patterns including conflict avoidance, speaking ratios, filler words, and leadership style. 📖 **Comprehensive**
-- [NotebookLM Integration](https://github.com/PleasePrompto/notebooklm-skill) - Lets AI chat directly with NotebookLM for source-grounded answers based exclusively on uploaded documents. 📄 **Standard** *By [@PleasePrompto](https://github.com/PleasePrompto)*
+- More skills coming soon!
 
 ### Creative & Media
 
@@ -98,30 +81,22 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 - [Slack GIF Creator](./slack-gif-creator/) - Creates animated GIFs optimized for Slack with validators for size constraints and composable animation primitives. 📖 **Comprehensive**
 - [Theme Factory](./theme-factory/) - Applies professional font and color themes to artifacts including slides, docs, reports, and HTML landing pages with 10 pre-set themes. 📄 **Standard**
 - [Video Downloader](./video-downloader/) - Downloads videos from YouTube and other platforms for offline viewing, editing, or archival with support for various formats and quality options. 📄 **Standard**
-- [youtube-transcript](https://github.com/michalparkola/tapestry-skills-for-claude-code/tree/main/youtube-transcript) - Fetch transcripts from YouTube videos and prepare summaries. 📄 **Standard**
+- More skills coming soon!
 
 ### Productivity & Organization
 
 - [File Organizer](./file-organizer/) - Intelligently organizes files and folders by understanding context, finding duplicates, suggesting better organizational structures, and automating cleanup tasks. 📖 **Comprehensive**
 - [Invoice Organizer](./invoice-organizer/) - Automatically organizes invoices and receipts for tax preparation by reading files, extracting information, and renaming consistently. 📖 **Comprehensive**
-- [kaizen](https://github.com/NeoLabHQ/context-engineering-kit/tree/master/plugins/kaizen/skills/kaizen) - Applies continuous improvement methodology with multiple analytical approaches, based on Japanese Kaizen philosophy and Lean methodology. 📖 **Comprehensive**
-- [n8n-skills](https://github.com/haunchen/n8n-skills) - Enables AI assistants to directly understand and operate n8n workflows. 📄 **Standard**
 - [Raffle Winner Picker](./raffle-winner-picker/) - Randomly selects winners from lists, spreadsheets, or Google Sheets for giveaways and contests with cryptographically secure randomness. 📄 **Standard**
-- [ship-learn-next](https://github.com/michalparkola/tapestry-skills-for-claude-code/tree/main/ship-learn-next) - Skill to help iterate on what to build or learn next, based on feedback loops. 📄 **Standard**
-- [tapestry](https://github.com/michalparkola/tapestry-skills-for-claude-code/tree/main/tapestry) - Interlink and summarize related documents into knowledge networks. 📄 **Standard**
+- More skills coming soon!
 
 ### Collaboration & Project Management
 
-- [git-pushing](https://github.com/mhattingpete/claude-skills-marketplace/tree/main/engineering-workflow-plugin/skills/git-pushing) - Automate git operations and repository interactions. 📄 **Standard**
-- [review-implementing](https://github.com/mhattingpete/claude-skills-marketplace/tree/main/engineering-workflow-plugin/skills/review-implementing) - Evaluate code implementation plans and align with specs. 📖 **Comprehensive**
-- [test-fixing](https://github.com/mhattingpete/claude-skills-marketplace/tree/main/engineering-workflow-plugin/skills/test-fixing) - Detect failing tests and propose patches or fixes. 📖 **Comprehensive**
+- More skills coming soon!
 
 ### Security & Systems
 
-- [computer-forensics](https://github.com/mhattingpete/claude-skills-marketplace/tree/main/computer-forensics-skills/skills/computer-forensics) - Digital forensics analysis and investigation techniques. 📖 **Comprehensive**
-- [file-deletion](https://github.com/mhattingpete/claude-skills-marketplace/tree/main/computer-forensics-skills/skills/file-deletion) - Secure file deletion and data sanitization methods. 📖 **Comprehensive**
-- [metadata-extraction](https://github.com/mhattingpete/claude-skills-marketplace/tree/main/computer-forensics-skills/skills/metadata-extraction) - Extract and analyze file metadata for forensic purposes. 📖 **Comprehensive**
-- [threat-hunting-with-sigma-rules](https://github.com/jthack/threat-hunting-with-sigma-rules-skill) - Use Sigma detection rules to hunt for threats and analyze security events. 📖 **Comprehensive**
+- More skills coming soon!
 
 ## Skill Depth Legend
 
