@@ -178,45 +178,294 @@ Skills are categorized by documentation depth:
 
 ### MCP Server for Skill Management 🚀
 
-**NEW:** Manage OpenCode skills easier with our MCP server!
+**NEW:** Manage OpenCode skills easier with our MCP server! The server provides 8 tools to browse, install, search, and manage OpenCode skills from within OpenCode.
 
-Choose your runtime:
+---
+
+## Getting Started with the MCP Server
+
+### Step 1: Choose Your Runtime
 
 #### TypeScript/Node.js (Recommended)
-- Faster startup (~20ms with bun)
+- Faster startup (~20ms with bun, ~50ms with node)
 - Smaller memory footprint (~35MB)
 - Modern npm/bun ecosystem
+- Type-safe with Zod schemas
+
+**Build the server:**
 
 ```bash
 cd opencode-skills-mcp-server-ts
+
+# Using npm
 npm install && npm run build
-# or with bun:
+
+# Using bun
 bun install && bun run build
 ```
 
 #### Python
 - Mature PyPI ecosystem
 - Familiar Python patterns
-- Comprehensive logging
+- Comprehensive logging to file + console
+- Runtime type checking with Pydantic
+
+**Build the server:**
 
 ```bash
 cd opencode-skills-mcp-server
+
+# Using the setup script (recommended)
 ./setup.sh
+
+# Or manually
+pip install -e .
 ```
 
-**Configure OpenCode** (add to `~/.config/opencode/config.json`):
+---
+
+### Step 2: Configure OpenCode
+
+Add the MCP server to your OpenCode config file. The config location depends on your OS:
+
+**Linux/macOS:** `~/.config/opencode/config.json`  
+**Windows:** `%APPDATA%\opencode\config.json`
+
+**Option A: Using node (TypeScript compiled)**
 
 ```json
 {
-  "mcpServers": {
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
     "opencode-skills": {
-      "command": "node",
-      "args": ["/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
-      "env": {}
+      "type": "local",
+      "command": ["node"],
+      "args": ["/absolute/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
+      "enabled": true
     }
   }
 }
 ```
+
+**Option B: Using bun (TypeScript with bun)**
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "opencode-skills": {
+      "type": "local",
+      "command": ["bun"],
+      "args": ["run", "/absolute/path/to/opencode-skills-mcp-server-ts/src/index.ts"],
+      "enabled": true
+    }
+  }
+}
+```
+
+**Option C: Using python (Python runtime)**
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "opencode-skills": {
+      "type": "local",
+      "command": ["python3"],
+      "args": ["-m", "opencode_skills_mcp"],
+      "enabled": true
+    }
+  }
+}
+```
+
+**Tips for paths:**
+- Use absolute paths (e.g., `/home/user/...` or `C:\Users\...`)
+- Or use home expansion with `{env:HOME}` on Linux/macOS
+- Make sure the path matches your chosen runtime (TypeScript needs `dist/index.js`, Python can use module import)
+
+---
+
+### Step 3: Restart OpenCode
+
+Restart OpenCode to load the MCP server:
+
+```bash
+# Stop OpenCode (Ctrl+C)
+opencode
+```
+
+The MCP server will start automatically when OpenCode launches, and the 8 skill management tools will be available.
+
+---
+
+### Step 4: Use the MCP Tools
+
+Once configured, you can use the MCP tools directly in OpenCode:
+
+```bash
+# List all available skills
+/list_skills
+
+# List skills filtered by category
+/list_skills with category "Development"
+
+# Get detailed information about a skill
+/get_skill_info for skill "content-research-writer"
+
+# Install a skill globally
+/install_skill with skill_name "file-organizer" and scope "global"
+
+# Search for skills
+/search_skills with query "document processing"
+
+# Get recommended skill combinations
+/get_combinations with category "Writing"
+
+# Install an entire workflow
+/install_workflow with workflow_name "content-pipeline" and scope "global"
+
+# Validate a skill structure
+/validate_skill with skill_path "/path/to/skill/directory"
+```
+
+---
+
+## MCP Server Options
+
+Your config supports additional options for customization:
+
+```json
+{
+  "mcp": {
+    "opencode-skills": {
+      "type": "local",
+      "command": ["node"],
+      "args": ["/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
+      "enabled": true,
+      "timeout": 5000,
+      "environment": {
+        "SKILLS_DIR": "/custom/path/to/skills"
+      }
+    }
+  }
+}
+```
+
+**Available options:**
+- `enabled` - Enable or disable the server (default: `true`)
+- `timeout` - Timeout in ms for loading tools (default: `5000`)
+- `environment` - Environment variables for the server (e.g., custom skills path)
+
+---
+
+## Disabling the MCP Server
+
+To temporarily disable the MCP server without removing it from your config:
+
+```json
+{
+  "mcp": {
+    "opencode-skills": {
+      "type": "local",
+      "command": ["node"],
+      "args": ["/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
+      "enabled": false
+    }
+  }
+}
+```
+
+Or disable all tools from the server globally:
+
+```json
+{
+  "mcp": {
+    "opencode-skills": { /* ... */ }
+  },
+  "tools": {
+    "opencode-skills*": false
+  }
+}
+```
+
+---
+
+## Per-Agent Configuration
+
+If you use multiple agents, you can enable the MCP server per-agent instead of globally:
+
+**OpenCode Config (disable globally):**
+
+```json
+{
+  "mcp": {
+    "opencode-skills": {
+      "type": "local",
+      "command": ["node"],
+      "args": ["/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
+      "enabled": true
+    }
+  },
+  "tools": {
+    "opencode-skills*": false
+  }
+}
+```
+
+**Agent Config (enable for specific agent):**
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "developer-assistant": {
+      "tools": {
+        "opencode-skills*": true
+      }
+    }
+  }
+}
+```
+
+---
+
+## Available MCP Tools
+
+| Tool | Description | Example |
+|------|-------------|---------|
+| `list_skills` | Browse all skills with filters | `list_skills with category "Development"` |
+| `get_skill_info` | View detailed skill information | `get_skill_info for skill "content-research-writer"` |
+| `install_skill` | Install skills globally/locally | `install_skill with skill_name "file-organizer"` |
+| `uninstall_skill` | Remove installed skills | `uninstall_skill with skill_name "old-skill"` |
+| `search_skills` | Find skills by keywords | `search_skills with query "document"` |
+| `validate_skill` | Check SKILL.md structure | `validate_skill with skill_path "/path/to/skill"` |
+| `get_combinations` | Get workflow combinations | `get_combinations with category "Writing"` |
+| `install_workflow` | Install entire workflow | `install_workflow with workflow_name "content-pipeline"` |
+
+---
+
+## Troubleshooting
+
+### MCP server doesn't start
+
+1. **Check path is absolute:** Use full paths, not relative paths
+2. **Verify dependencies are installed:** Run `npm install` or `pip install -e .`
+3. **Check file permissions:** Ensure the entry point file is executable
+4. **Review logs:** Check `logs/opencode_skills_mcp.log` (Python version)
+
+### Tools not appearing
+
+1. **Restart OpenCode** after adding config
+2. **Check `enabled: true`** is set in your config
+3. **Verify syntax:** Ensure JSON is valid (no syntax errors)
+4. **Check timeout:** Increase `timeout` if tools take time to load (default: 5000ms)
+
+### Skills not found
+
+1. **Ensure skills_metadata.json exists** in the MCP server directory
+2. **Check SKILLS_DIR environment** if you customized the path
+3. **Verify skill directory** exists in your awesome-opencode-skills repository
 
 **MCP Tools Available:**
 - `list_skills` - Browse all skills with filters
