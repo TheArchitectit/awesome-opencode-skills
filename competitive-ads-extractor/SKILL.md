@@ -7,6 +7,11 @@ description: Extracts and analyzes competitors' ads from ad libraries (Facebook,
 
 This skill extracts your competitors' ads from ad libraries and analyzes what's working—the problems they're highlighting, use cases they're targeting, and copy/creative that's resonating.
 
+## Prerequisites
+
+- **Web scraping tools**: For accessing ad libraries (Selenium, Playwright, or direct APIs)
+- **Optional**: Facebook Business API or LinkedIn Ads API for programmatic access
+
 ## When to Use This Skill
 
 - Researching competitor ad strategies

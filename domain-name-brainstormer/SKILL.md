@@ -7,6 +7,11 @@ description: Generates creative domain name ideas for your project and checks av
 
 This skill helps you find the perfect domain name for your project by generating creative options and checking what's actually available to register.
 
+## Prerequisites
+
+- **Domain API access**: Whois or domain registrar API for availability checking
+- **Optional**: Python libraries for DNS lookups (dnspython)
+
 ## When to Use This Skill
 
 - Starting a new project or company

@@ -1,0 +1,236 @@
+{
+  "skill-creator": {
+    "name": "skill-creator",
+    "description": "Provides guidance for creating effective OpenCode Skills that extend capabilities with specialized knowledge, workflows, and tool integrations.",
+    "category": "Development",
+    "depth": "Comprehensive",
+    "lines": 210,
+    "keywords": ["skill", "create", "extension", "custom skill"],
+    "prerequisites": "None"
+  },
+  "brand-guidelines": {
+    "name": "brand-guidelines",
+    "description": "Applies OpenCode's official brand colors and typography to artifacts for consistent visual identity and professional design standards.",
+    "category": "Creative",
+    "depth": "Standard",
+    "lines": 60,
+    "keywords": ["brand", "styling", "colors", "fonts", "design"],
+    "prerequisites": "None"
+  },
+  "artifacts-builder": {
+    "name": "artifacts-builder",
+    "description": "Suite of tools for creating elaborate, multi-component HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui).",
+    "category": "Development",
+    "depth": "Standard",
+    "lines": 74,
+    "keywords": ["artifact", "html", "react", "tailwind", "frontend"],
+    "prerequisites": "Node.js 18+, npm"
+  },
+  "mcp-builder": {
+    "name": "mcp-builder",
+    "description": "Guides creation of high-quality MCP (Model Context Protocol) servers for integrating external APIs and services with LLMs using Python or TypeScript.",
+    "category": "Development",
+    "depth": "Comprehensive",
+    "lines": 329,
+    "keywords": ["mcp", "server", "api", "integration", "model context protocol"],
+    "prerequisites": "MCP SDK (Python or TypeScript)"
+  },
+  "webapp-testing": {
+    "name": "webapp-testing",
+    "description": "Tests local web applications using Playwright for verifying frontend functionality, debugging UI behavior, and capturing screenshots.",
+    "category": "Development",
+    "depth": "Standard",
+    "lines": 96,
+    "keywords": ["testing", "playwright", "webapp", "browser", "automation"],
+    "prerequisites": "Python 3.7+, Playwright, browser drivers"
+  },
+  "docx": {
+    "name": "docx",
+    "description": "Create, edit, analyze Word docs with tracked changes, comments, formatting.",
+    "category": "Document Processing",
+    "depth": "Comprehensive",
+    "lines": 197,
+    "keywords": ["word", "docx", "document", "editing", "tracked changes"],
+    "prerequisites": "pandoc, docx (npm), defusedxml (pip)"
+  },
+  "pdf": {
+    "name": "pdf",
+    "description": "Extract text, tables, metadata, merge & annotate PDFs.",
+    "category": "Document Processing",
+    "depth": "Comprehensive",
+    "lines": 295,
+    "keywords": ["pdf", "extract", "merge", "annotate", "forms"],
+    "prerequisites": "pypdf, pdfplumber, reportlab, pytesseract (for OCR)"
+  },
+  "pptx": {
+    "name": "pptx",
+    "description": "Read, generate, and adjust slides, layouts, templates.",
+    "category": "Document Processing",
+    "depth": "Standard",
+    "lines": 150,
+    "keywords": ["powerpoint", "pptx", "slides", "presentation"],
+    "prerequisites": "python-pptx"
+  },
+  "xlsx": {
+    "name": "xlsx",
+    "description": "Spreadsheet manipulation: formulas, charts, data transformations.",
+    "category": "Document Processing",
+    "depth": "Standard",
+    "lines": 100,
+    "keywords": ["excel", "xlsx", "spreadsheet", "data"],
+    "prerequisites": "openpyxl"
+  },
+  "file-organizer": {
+    "name": "file-organizer",
+    "description": "Intelligently organizes files and folders by understanding context, finding duplicates, suggesting better organizational structures, and automating cleanup tasks.",
+    "category": "Productivity",
+    "depth": "Comprehensive",
+    "lines": 434,
+    "keywords": ["organize", "files", "folders", "cleanup", "duplicate"],
+    "prerequisites": "None"
+  },
+  "content-research-writer": {
+    "name": "content-research-writer",
+    "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, and providing section-by-section feedback.",
+    "category": "Writing",
+    "depth": "Comprehensive",
+    "lines": 539,
+    "keywords": ["content", "writing", "research", "citations", "blog"],
+    "prerequisites": "Web search access"
+  },
+  "canvas-design": {
+    "name": "canvas-design",
+    "description": "Creates beautiful visual art in PNG and PDF documents using design philosophy and aesthetic principles for posters, designs, and static pieces.",
+    "category": "Creative",
+    "depth": "Standard",
+    "lines": 130,
+    "keywords": ["canvas", "design", "art", "graphics", "poster"],
+    "prerequisites": "Python 3.7+, Pillow (PIL)"
+  },
+  "video-downloader": {
+    "name": "video-downloader",
+    "description": "Downloads videos from YouTube and other platforms for offline viewing, editing, or archival with support for various formats and quality options.",
+    "category": "Productivity",
+    "depth": "Standard",
+    "lines": 107,
+    "keywords": ["video", "download", "youtube", "offline", "archival"],
+    "prerequisites": "Python 3.7+, yt-dlp or yt-dl, FFmpeg (optional)"
+  },
+  "internal-comms": {
+    "name": "internal-comms",
+    "description": "Helps write internal communications including 3P updates, company newsletters, FAQs, status reports, and project updates using company-specific formats.",
+    "category": "Communication",
+    "depth": "Standard",
+    "lines": 33,
+    "keywords": ["internal", "communication", "3p", "newsletter", "status report"],
+    "prerequisites": "None"
+  },
+  "invoice-organizer": {
+    "name": "invoice-organizer",
+    "description": "Automatically organizes invoices and receipts for tax preparation by reading files, extracting information, and renaming consistently.",
+    "category": "Productivity",
+    "depth": "Comprehensive",
+    "lines": 447,
+    "keywords": ["invoice", "receipt", "tax", "organize", "finance"],
+    "prerequisites": "PDF processing (pdftotext, pdfplumber), OCR (tesseract-ocr)"
+  },
+  "competitive-ads-extractor": {
+    "name": "competitive-ads-extractor",
+    "description": "Extracts and analyzes competitors' ads from ad libraries to understand messaging and creative approaches that resonate.",
+    "category": "Business",
+    "depth": "Comprehensive",
+    "lines": 294,
+    "keywords": ["ads", "competitor", "messaging", "creative", "marketing"],
+    "prerequisites": "Web scraping tools (Selenium, Playwright, or API access)"
+  },
+  "developer-growth-analysis": {
+    "name": "developer-growth-analysis",
+    "description": "Analyzes your recent OpenCode chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources.",
+    "category": "Development",
+    "depth": "Comprehensive",
+    "lines": 323,
+    "keywords": ["growth", "analysis", "patterns", "learning", "feedback"],
+    "prerequisites": "OpenCode chat history access"
+  },
+  "meeting-insights-analyzer": {
+    "name": "meeting-insights-analyzer",
+    "description": "Analyzes meeting transcripts to uncover behavioral patterns including conflict avoidance, speaking ratios, filler words, and leadership style.",
+    "category": "Communication",
+    "depth": "Comprehensive",
+    "lines": 328,
+    "keywords": ["meeting", "transcript", "analysis", "communication", "leadership"],
+    "prerequisites": "Meeting transcripts (txt, md, vtt, srt, docx)"
+  },
+  "image-enhancer": {
+    "name": "image-enhancer",
+    "description": "Improves image and screenshot quality by enhancing resolution, sharpness, and clarity for professional presentations and documentation.",
+    "category": "Creative",
+    "depth": "Standard",
+    "lines": 100,
+    "keywords": ["image", "enhance", "quality", "screenshot", "upscaling"],
+    "prerequisites": "Python 3.7+, PIL/Pillow, OpenCV (cv2)"
+  },
+  "lead-research-assistant": {
+    "name": "lead-research-assistant",
+    "description": "Identifies and qualifies high-quality leads by analyzing your product, searching for target companies, and providing actionable outreach strategies.",
+    "category": "Business",
+    "depth": "Comprehensive",
+    "lines": 200,
+    "keywords": ["lead", "research", "prospecting", "sales", "business development"],
+    "prerequisites": "Web search access"
+  },
+  "raffle-winner-picker": {
+    "name": "raffle-winner-picker",
+    "description": "Randomly selects winners from lists, spreadsheets, or Google Sheets for giveaways and contests with cryptographically secure randomness.",
+    "category": "Productivity",
+    "depth": "Standard",
+    "lines": 160,
+    "keywords": ["raffle", "winner", "random", "giveaway", "contest"],
+    "prerequisites": "Python 3.7+, pandas, Google Sheets API (optional)"
+  },
+  "slack-gif-creator": {
+    "name": "slack-gif-creator",
+    "description": "Creates animated GIFs optimized for Slack with validators for size constraints and composable animation primitives.",
+    "category": "Creative",
+    "depth": "Comprehensive",
+    "lines": 647,
+    "keywords": ["gif", "slack", "animation", "emoji", "visual effects"],
+    "prerequisites": "Python 3.7+, Pillow, imageio, numpy"
+  },
+  "theme-factory": {
+    "name": "theme-factory",
+    "description": "Applies professional font and color themes to artifacts including slides, docs, reports, and HTML landing pages with 10 pre-set themes.",
+    "category": "Creative",
+    "depth": "Standard",
+    "lines": 60,
+    "keywords": ["theme", "styling", "colors", "fonts", "branding"],
+    "prerequisites": "None"
+  },
+  "skill-share": {
+    "name": "skill-share",
+    "description": "A skill that creates new OpenCode skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery.",
+    "category": "Development",
+    "depth": "Standard",
+    "lines": 81,
+    "keywords": ["skill", "share", "slack", "collaboration", "team"],
+    "prerequisites": "Slack workspace connection via Rube"
+  },
+  "changelog-generator": {
+    "name": "changelog-generator",
+    "description": "Automatically creates user-facing changelogs from git commits by analyzing history and transforming technical commits into customer-friendly release notes.",
+    "category": "Development",
+    "depth": "Standard",
+    "lines": 105,
+    "keywords": ["changelog", "git", "release notes", "documentation"],
+    "prerequisites": "Git access"
+  },
+  "domain-name-brainstormer": {
+    "name": "domain-name-brainstormer",
+    "description": "Generates creative domain name ideas and checks availability across multiple TLDs including .com, .io, .dev, and .ai extensions.",
+    "category": "Business",
+    "depth": "Comprehensive",
+    "lines": 213,
+    "keywords": ["domain", "brainstorm", "naming", "branding", "availability"],
+    "prerequisites": "Domain API (whois)"
+  }
+}

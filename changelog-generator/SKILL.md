@@ -7,6 +7,12 @@ description: Automatically creates user-facing changelogs from git commits by an
 
 This skill transforms technical git commits into polished, user-friendly changelogs that your customers and users will actually understand and appreciate.
 
+## Prerequisites
+
+- **Git**: Required for reading commit history
+- **Repository access**: Must be run from a git repository root
+- **Optional**: Custom changelog style guide (CHANGELOG_STYLE.md)
+
 ## When to Use This Skill
 
 - Preparing release notes for a new version

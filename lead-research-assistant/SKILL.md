@@ -7,6 +7,12 @@ description: Identifies high-quality leads for your product or service by analyz
 
 This skill helps you identify and qualify potential leads for your business by analyzing your product/service, understanding your ideal customer profile, and providing actionable outreach strategies.
 
+## Prerequisites
+
+- **Web search access**: Required for researching target companies
+- **Optional**: Codebase analysis for understanding your product
+- **Optional**: Google/LinkedIn search tools for company research
+
 ## When to Use This Skill
 
 - Finding potential customers or clients for your product/service

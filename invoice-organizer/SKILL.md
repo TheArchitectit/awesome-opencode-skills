@@ -7,6 +7,12 @@ description: Automatically organizes invoices and receipts for tax preparation b
 
 This skill transforms chaotic folders of invoices, receipts, and financial documents into a clean, tax-ready filing system without manual effort.
 
+## Prerequisites
+
+- **PDF processing**: pdftotext (poppler-utils) or pdfplumber for reading invoice content
+- **OCR for receipts**: tesseract-ocr for scanned receipt images
+- **Optional**: Pandoc for converting documents to text format
+
 ## When to Use This Skill
 
 - Preparing for tax season and need organized records

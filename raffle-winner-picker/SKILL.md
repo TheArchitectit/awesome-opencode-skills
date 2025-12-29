@@ -7,6 +7,12 @@ description: Picks random winners from lists, spreadsheets, or Google Sheets for
 
 This skill randomly selects winners from lists, spreadsheets, or Google Sheets for giveaways and contests.
 
+## Prerequisites
+
+- **Python 3.7+**: Required for random selection scripts
+- **pandas**: For CSV/Excel file reading (install via `pip install pandas`)
+- **Optional**: Google Sheets API access via gspread library
+
 ## When to Use This Skill
 
 - Running social media giveaways

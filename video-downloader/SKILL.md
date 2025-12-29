@@ -7,6 +7,12 @@ description: Downloads videos from YouTube and other platforms for offline viewi
 
 This skill downloads videos from YouTube and other platforms directly to your computer.
 
+## Prerequisites
+
+- **Python 3.7+**: Required for video download scripts
+- **yt-dlp or yt-dlp**: Video download utility (install via pip)
+- **FFmpeg**: For video format conversion (optional but recommended)
+
 ## When to Use This Skill
 
 - Downloading YouTube videos for offline viewing

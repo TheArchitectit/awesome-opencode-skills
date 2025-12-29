@@ -7,6 +7,13 @@ description: Improves the quality of images, especially screenshots, by enhancin
 
 This skill takes your images and screenshots and makes them look better—sharper, clearer, and more professional.
 
+## Prerequisites
+
+- **Python 3.7+**: Required for image processing scripts
+- **PIL/Pillow**: Image library (install via `pip install pillow`)
+- **OpenCV (cv2)**: Advanced image enhancement (install via `pip install opencv-python`)
+- **Optional**: waifu2x or similar upscaling models for AI enhancement
+
 ## When to Use This Skill
 
 - Improving screenshot quality for blog posts or documentation
