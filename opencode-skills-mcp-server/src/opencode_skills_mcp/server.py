@@ -1,11 +1,9 @@
 """MCP Server entry point for OpenCode Skills management."""
 
-import asyncio
 from mcp.types import TextContent
 from mcp.server.fastmcp import FastMCP
 
-from .config import get_config
-from .logging_config import setup_logging, get_logger
+from .logging_config import setup_logging
 from .models import (
     ListSkillsInput,
     GetSkillInfoInput,
@@ -89,6 +87,6 @@ def main():
     """Main entry point for the MCP server."""
     logger.info("Starting OpenCode Skills MCP Server...")
     server.run()
-    
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()

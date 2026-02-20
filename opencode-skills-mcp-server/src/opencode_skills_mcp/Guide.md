@@ -24,7 +24,7 @@ This document summarizes the issues encountered while setting up the OpenCode MC
 - **Updated Package Structure**: Modified `pyproject.toml` for `src/` layout, added `__main__.py`, and reinstalled the package.
 - **Fixed Imports**: Updated imports in `server.py` to `from mcp.types import TextContent` and `from mcp.server.fastmcp import FastMCP`.
 - **Migrated to FastMCP**: Replaced `Server` with `FastMCP` and used `@server.tool` decorators instead of `add_tool`.
-- **Resolved Asyncio Issues**: Made `main()` synchronous and removed `asyncio.run()` to avoid event loop conflicts.
+- **Resolved Asyncio Issues**: Made `main()` synchronous and call `main()` directly in the module entry point to avoid event loop conflicts.
 - **Enabled Server**: Verified config validity and toggled enable in OpenCode.
 
 ## Final Result
