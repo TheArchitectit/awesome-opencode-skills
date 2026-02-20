@@ -1,6 +1,6 @@
 """OpenCode Skills MCP Server - Package initialization."""
 
-from .server import create_server
+#from .server import create_server
 from .models import (
     ListSkillsInput,
     GetSkillInfoInput,
