@@ -29,7 +29,7 @@ Use this skill when:
    - `Gemfile`, `Gemfile.lock` (Ruby)
    - `go.mod`, `go.sum` (Go)
    - `Cargo.toml` (Rust)
-   - `pom.xml`, `build.gradle` (Java)
+   - `pom.xml`, `build.gradle`, `build.gradle.kts` (Java/Kotlin)
 3. Identify entry points: main scripts, entry files, startup commands
 
 ### Step 2: Perform Static Analysis
@@ -49,8 +49,8 @@ Reference: Use `references/package_checks.md` for known suspicious packages and 
 
 Examine all scripts for:
 - Lifecycle hooks in manifest files (`postinstall`, `preinstall`, `prepare`, `prepublish`)
-- Shell execution patterns: `exec`, `spawn`, backticks, `system()`, `os.system()`
-- Dynamic code execution: `eval()`, `Function()`, `setTimeout()` with strings
+- Shell execution patterns: `exec`, `spawn`, backticks, `system()`, `os.system()`, `subprocess` calls
+- Dynamic code execution: `eval()`, `Function()`, `setTimeout()` with strings, `pickle.loads()`, `unserialize()`
 - Encoded payloads: base64, hex, obfuscated strings, string concatenation
 - Download and execute patterns: curl/wget piping to shell
 
@@ -162,7 +162,3 @@ This skill does not require executable scripts.
 ### assets/
 
 This skill does not require assets.
-
----
-
-Delete unused directories before packaging.
