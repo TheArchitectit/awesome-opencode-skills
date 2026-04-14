@@ -53,7 +53,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 - [Changelog Generator](./changelog-generator/) - Automatically creates user-facing changelogs from git commits by analyzing history and transforming technical commits into customer-friendly release notes. 📄 **Standard**
 - [MCP Builder](./mcp-builder/) - Guides creation of high-quality MCP (Model Context Protocol) servers for integrating external APIs and services with LLMs using Python or TypeScript. 📖 **Comprehensive**
 - [Skill Creator](./skill-creator/) - Provides guidance for creating effective OpenCode Skills that extend capabilities with specialized knowledge, workflows, and tool integrations. 📖 **Comprehensive**
-- More skills coming soon!
+- [Staff Engineer Review](./staff-engineer-review/) - Perform deep code review of pull requests as a Staff+ engineer, evaluating alignment, architecture, code quality, correctness, performance, and test coverage. 📄 **Standard**
 - [Webapp Testing](./webapp-testing/) - Tests local web applications using Playwright for verifying frontend functionality, debugging UI behavior, and capturing screenshots. 📄 **Standard**
 
 ### Data & Analysis
