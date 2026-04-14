@@ -38,7 +38,7 @@ Suspicious patterns:
 - Hardcoded IP addresses (especially non-local)
 - Base64-encoded domains
 - DNS lookups for reconnaissance
-- Data发送到 external servers
+- Data sent to external servers
 - Command and control patterns
 
 ### File System Red Flags
