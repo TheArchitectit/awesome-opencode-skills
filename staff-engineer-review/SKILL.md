@@ -1,6 +1,6 @@
 ---
 name: staff-engineer-review
-description: Perform deep code review of pull requests as a Staff+ level engineer. Use when reviewing PRs, evaluating implementation against plans, assessing architectural decisions, code quality, and providing actionable feedback.
+description: Performs deep code review of pull requests as a Staff+ level engineer. This skill should be used when reviewing PRs, evaluating implementation against plans, assessing architectural decisions, code quality, and providing actionable feedback.
 ---
 
 # Staff Engineer Review
@@ -11,13 +11,13 @@ Perform rigorous code review of pull requests by comparing the original plan (PR
 
 ## When to Use This Skill
 
-Use this skill when:
-- Reviewing a pull request and need structured evaluation
-- Evaluating whether implementation matches stated plan
-- Assessing architectural decisions in PRs
-- Providing detailed code review feedback
-- Checking code quality, correctness, and performance implications
-- Evaluating test coverage adequacy
+This skill should be used when:
+- Review a pull request and provide a structured evaluation
+- Evaluate whether implementation matches the stated plan
+- Assess architectural decisions in PRs
+- Provide detailed code review feedback
+- Check code quality, correctness, and performance implications
+- Evaluate test coverage adequacy
 
 ## Review Workflow
 
@@ -167,7 +167,6 @@ Specific test cases to add:
 ## Important Notes
 
 - Verify everything; do not assume correctness
-- If something is unclear, explicitly state assumptions
 - Consider the context of the codebase and team conventions
 - Balance perfectionism with pragmatism
 - Focus review on what matters most for the PR's success
