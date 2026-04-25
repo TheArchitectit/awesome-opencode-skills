@@ -550,3 +550,14 @@ Individual skills may have different licenses - please check each skill's folder
 ---
 
 **Note**: OpenCode Skills are compatible with OpenCode's skill system. Skills are automatically discovered from `~/.config/opencode/skill/`, `.opencode/skill/`, and `.claude/skills/` directories, ensuring seamless integration.
+
+---
+
+### ☕ Support This Project
+
+Help keep this project going — use a referral link below and both of us get credits!
+
+| Service | Your Bonus | Details |
+|---------|-----------|---------|
+| [**Neuralwatt**](https://portal.neuralwatt.com/auth/register?ref=NW-ROGER-ET3Y) | $10 in credits | Spend $10+ → you get $10, we get $20 |
+| [**Synthetic**](https://synthetic.new/?referral=UAWqkKQQLFkzMkY) | $10 in credits | Subscribe → both get $10 credit (135 req/5hr, 500 tool calls/day) |
