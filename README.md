@@ -96,7 +96,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 
 ### Security & Systems
 
-- More skills coming soon!
+- [Code Security Auditor](./code-security-auditor/) - Performs pre-execution security audits of untrusted codebases through static analysis to identify supply chain risks and security vulnerabilities. 📖 **Comprehensive**
 
 ## Skill Depth Legend
 
