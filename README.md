@@ -93,6 +93,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 ### Collaboration & Project Management
 
 - [Skill Share](./skill-share/) - Creates new OpenCode skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery. 📄 **Standard**
+- [opencode-handoff-p2p](./opencode-handoff-p2p/) - Transfer OpenCode session share URLs peer-to-peer between machines or collaborators via personal GitHub private inbox repos. 5-tier verification (filename / trust / content / commit author / GPG signature), transactional fetch-before-delete, prompt-injection-safe Chinese trust boundary. 📖 **Comprehensive**
 
 ### Security & Systems
 
