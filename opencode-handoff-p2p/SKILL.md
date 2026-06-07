@@ -143,6 +143,7 @@ gh repo clone "$ME/$REPO_NAME" <path> -- \
   -c protocol.file.allow=never \
   -c protocol.allow=never \
   -c protocol.https.allow=always \
+  -c protocol.ssh.allow=always \
   -c submodule.recurse=false
 ```
 
@@ -152,8 +153,11 @@ git -C <clone-path> config --local core.symlinks false
 git -C <clone-path> config --local submodule.recurse false
 git -C <clone-path> config --local protocol.allow never
 git -C <clone-path> config --local protocol.https.allow always
+git -C <clone-path> config --local protocol.ssh.allow always
 git -C <clone-path> config --local protocol.file.allow never
 ```
+
+Both HTTPS and SSH are explicitly allowed — `gh` may use either depending on the user's `gh` configuration (some users set `git config --global url.git@github.com:.insteadOf https://github.com/` which redirects to SSH). Restricting to HTTPS-only would break clones for SSH-default users.
 
 ### Bootstrap steps
 
@@ -360,7 +364,7 @@ Trigger phrases: "发给 X", "把会话发给 X", "send this to X", "hand off to
    gh repo clone "<recipient>/$REPO_NAME" "$tmpdir" -- \
      -c core.symlinks=false -c protocol.file.allow=never \
      -c protocol.allow=never -c protocol.https.allow=always \
-     -c submodule.recurse=false
+     -c protocol.ssh.allow=always -c submodule.recurse=false
    ```
 3. Persist hardening to local config.
 4. Write `"$tmpdir/<timestamp>--from-$ME.txt"` with URL using `printf '%s\n' "$URL"` (NOT `echo`). Timestamp: `date -u +"%Y-%m-%dT%H-%M-%SZ"`.
@@ -403,6 +407,7 @@ Files failing tiers 1/3/4/5 stay in place. Files failing tier 2 are silently del
 - Submodule init attack. Caught by `submodule.recurse=false` + `protocol.file.allow=never`.
 - Project-level `opencode.json` config hijack. Caught by separate `trust.json` outside merge path.
 - Replay attacks. Caught by re-running pipeline on every cycle.
+- **Post-add modification bypass** (v1.0.1 fix): a collaborator modifying a file originally added by a trusted sender — the current blob content would otherwise pass Tier 3 while Tier 4 sees the original add commit's legitimate author/signature. Caught by `get_last_modifying_sha()` which checks the LAST commit that touched the file (producing the current blob), not the original add.
 - Email-based attribution forgery. Mitigated by Tier 5 when `require_signed_commits=true`.
 - Force-push history rewrite. Mitigated by branch protection (paid GitHub feature).
 - Prompt injection from fetched share content taking autonomous action. Caught by trust boundary preamble.

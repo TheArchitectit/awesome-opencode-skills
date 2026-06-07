@@ -177,15 +177,28 @@ def verify_tier_3(clone: Path, filepath: str) -> Tuple[bool, str]:
     return False, "内容不是合法的 OpenCode share URL"
 
 
-def get_add_sha(clone: Path, filepath: str) -> Optional[str]:
+def get_last_modifying_sha(clone: Path, filepath: str) -> Optional[str]:
+    """Get SHA of the LAST commit that modified this file (NOT the original add).
+
+    SECURITY (critical): must use the last-modifying commit, not the add commit.
+    Otherwise an attacker who is also a repo collaborator can modify a file
+    originally added by a trusted sender — the current blob is the attacker's
+    content, but if Tier 4 checks the original ADD commit it would see the
+    legitimate sender's authorship and signature, bypassing identity verification
+    entirely.
+
+    `git log -1 --format=%H -- <file>` (without --diff-filter=A) returns the
+    most recent commit that touched the path, which is what produced the
+    current blob content we just verified in Tier 3.
+    """
     rc, out, _ = run([
         "git", "-C", str(clone),
-        "log", "--diff-filter=A", "--format=%H", "--", filepath,
+        "log", "-1", "--format=%H", "--", filepath,
     ])
     if rc != 0:
         return None
-    lines = [l for l in out.decode("utf-8", "replace").splitlines() if l]
-    return lines[0] if lines else None
+    line = out.decode("utf-8", "replace").strip()
+    return line if line else None
 
 
 def verify_tier_4(repo: str, sha: str, claimed: str) -> Tuple[bool, Optional[str], Optional[str]]:
@@ -257,11 +270,11 @@ def process_file(
         return result
     result["url"] = url_or_reason
 
-    sha = get_add_sha(clone, filename)
+    sha = get_last_modifying_sha(clone, filename)
     result["commit_sha"] = sha
     if not sha:
         result["tier_failed"] = 4
-        result["tier_failed_reason"] = "无法定位添加此文件的 commit"
+        result["tier_failed_reason"] = "无法定位最近修改此文件的 commit"
         result["action"] = "keep"
         return result
     ok4, author, committer = verify_tier_4(repo, sha, claimed)
