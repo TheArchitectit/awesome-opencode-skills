@@ -4,6 +4,10 @@
 
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configuration constants
 const CHARACTER_LIMIT = 25000;
@@ -14,11 +18,12 @@ let OPENCODE_GLOBAL: string;
 let OPENCODE_PROJECT: string;
 
 export function initConfig(customSkillsDir?: string): void {
-  // Auto-detect skills directory
   SKILLS_DIR = customSkillsDir || path.resolve(__dirname, '..', '..');
 
-  // OpenCode installation paths
   const HOME = process.env.HOME || process.env.USERPROFILE;
+  if (!HOME) {
+    throw new Error('Could not determine home directory: HOME or USERPROFILE environment variable must be set');
+  }
   OPENCODE_GLOBAL = path.join(HOME, '.config', 'opencode', 'skill');
   OPENCODE_PROJECT = path.join(process.cwd(), '.opencode', 'skill');
 

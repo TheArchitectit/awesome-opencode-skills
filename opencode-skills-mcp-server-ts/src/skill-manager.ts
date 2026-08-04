@@ -15,7 +15,14 @@ import {
 } from './config.js';
 
 // Workflow combinations
-const WORKFLOW_COMBINATIONS = {
+interface WorkflowCombination {
+  name: string;
+  description: string;
+  skills: string[];
+  category: string;
+}
+
+const WORKFLOW_COMBINATIONS: Record<string, WorkflowCombination> = {
   'content-pipeline': {
     name: 'Content Creation Pipeline',
     description: 'Create professional blog posts with images and branding',
@@ -200,7 +207,7 @@ async function copyDirectory(src: string, dest: string): Promise<void> {
     const srcPath = path.join(src, entry.name);
     const destPath2 = path.join(dest, entry.name);
 
-    if (entry.isDirectory) {
+    if (entry.isDirectory()) {
       // Recursively copy subdirectories
       await copyDirectory(srcPath, destPath2);
     } else {
@@ -287,18 +294,17 @@ export async function validateSkill(skillPathStr: string): Promise<string> {
     return `# Validation Error\n\nSKILL.md not found at ${skillMd}`;
   }
 
+  let content: string;
   try {
-    const content = await fs.readFile(skillMd, 'utf-8');
+    content = await fs.readFile(skillMd, 'utf-8');
   } catch (error) {
     return `# Validation Error\n\nFailed to read SKILL.md: ${error}`;
   }
 
-  // Check for YAML frontmatter
   if (!content.startsWith('---')) {
     return '# Validation Error\n\n❌ Invalid: Missing YAML frontmatter (must start with \'---\')';
   }
 
-  // Check for closing ---
   const frontmatterEnd = content.indexOf('---', 3);
   if (frontmatterEnd === -1) {
     return '# Validation Error\n\n❌ Invalid: Missing closing \'---\' in YAML frontmatter';
@@ -327,11 +333,11 @@ export async function validateSkill(skillPathStr: string): Promise<string> {
 }
 
 export async function getCombinations(category?: string): Promise<string> {
-  let combinations = { ...WORKFLOW_COMBINATIONS };
+  let combinations: Record<string, WorkflowCombination> = { ...WORKFLOW_COMBINATIONS };
 
   if (category) {
     combinations = Object.fromEntries(
-      Object.entries(combinations).filter(([_, v]: [string, any]) => v.category === category)
+      Object.entries(combinations).filter(([_, v]) => v.category === category)
     );
   }
 

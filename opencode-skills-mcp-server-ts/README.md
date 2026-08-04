@@ -32,15 +32,16 @@ bun run build
 
 ### Configure with OpenCode
 
-Add to your OpenCode config (usually `~/.config/opencode/config.json`):
+Add to your [OpenCode config](https://opencode.ai/docs/config/) (`opencode.json` or `opencode.jsonc`):
 
-```json
+```jsonc
 {
-  "mcpServers": {
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
     "opencode-skills": {
-      "command": "node",
-      "args": ["/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
-      "env": {}
+      "type": "local",
+      "command": ["node", "/path/to/opencode-skills-mcp-server-ts/dist/index.js"],
+      "enabled": true
     }
   }
 }
@@ -48,13 +49,14 @@ Add to your OpenCode config (usually `~/.config/opencode/config.json`):
 
 Or for bun:
 
-```json
+```jsonc
 {
-  "mcpServers": {
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
     "opencode-skills": {
-      "command": "bun",
-      "args": ["run", "/path/to/opencode-skills-mcp-server-ts/dist/index.ts"],
-      "env": {}
+      "type": "local",
+      "command": ["bun", "run", "/path/to/opencode-skills-mcp-server-ts/src/index.ts"],
+      "enabled": true
     }
   }
 }
@@ -64,84 +66,84 @@ Or for bun:
 
 ## Usage
 
-Once configured, you can use the MCP server tools from OpenCode:
+Once configured, the MCP server tools are automatically available to the LLM. You can use them in your prompts:
 
 ### List All Skills
 
 ```
-/list_skills
+List all available skills
 ```
 
 Filter by category:
 ```
-/list_skills --category "Development"
+List skills in the Development category
 ```
 
 Filter by depth:
 ```
-/list_skills --depth "Comprehensive"
+Show me comprehensive skills only
 ```
 
 Show only installed:
 ```
-/list_skills --installed-only
+List only the skills I have installed
 ```
 
 ### Get Skill Information
 
 ```
-/get_skill_info --skill-name "content-research-writer"
+Get details about the content-research-writer skill
 ```
 
 ### Install a Skill
 
 Globally:
 ```
-/install_skill --skill-name "file-organizer" --scope "global"
+Install the file-organizer skill globally
 ```
 
 Locally (for current project):
 ```
-/install_skill --skill-name "changelog-generator" --scope "project"
+Install the changelog-generator skill for this project
 ```
 
 ### Uninstall a Skill
 
 ```
-/uninstall_skill --skill-name "old-skill" --scope "global"
+Uninstall the old-skill skill globally
 ```
 
 ### Search for Skills
 
 ```
-/search_skills --query "document"
+Search for skills related to documents
 ```
 
 ```
-/search_skills --query "testing automation"
+Find skills for testing automation
 ```
 
 ### Validate a Skill
 
 ```
-/validate_skill --skill-path "/path/to/skill"
+Validate the skill at /path/to/skill
 ```
 
 ### Get Skill Combinations
 
 ```
-/get_combinations
+Show me recommended skill combinations
 ```
 
 Filter by category:
 ```
-/get_combinations --category "Writing"
+Show writing workflow combinations
 ```
 
 ### Install a Workflow
 
 ```
-/install_workflow --workflow-name "content-pipeline" --scope "global"
+Install the content-pipeline workflow globally
 ```
 
 Available workflows:
