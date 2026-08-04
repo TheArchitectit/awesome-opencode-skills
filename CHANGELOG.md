@@ -2,6 +2,22 @@
 
 All notable changes to the Awesome OpenCode Skills collection are documented here.
 
+## [1.2.0] - 2026-08-04
+
+### ✨ New Skills
+
+Ported from the `awesome-claude-skills` upstream (ComposioHQ) during a skills audit; rebranded Claude/Anthropic references to OpenCode.
+
+- **LangSmith Fetch** — Debugs LangChain and LangGraph agents by fetching and analyzing execution traces from LangSmith Studio. Investigates errors, tool calls, memory operations, and performance. 📖 Comprehensive → Development & Code Tools
+- **Twitter Algorithm Optimizer** — Analyzes and optimizes tweets for maximum reach and engagement using Twitter's open-source algorithm insights (Real-graph, SimClusters, TwHIN, Tweepcred). 📖 Comprehensive → Communication & Writing
+- **Tailored Resume Generator** — Analyzes job descriptions and generates tailored resumes highlighting relevant experience, skills, and achievements to maximize interview chances, with ATS optimization. 📖 Comprehensive → Productivity & Organization
+
+### 🔧 Improvements
+
+- **Skills registry**: Expanded `.opencode/skills.json` from 28 → 31 registered skills
+- **README completeness**: Added the 3 new skills to their category listings (Development, Communication & Writing, Productivity & Organization)
+- **Upstream audit**: Compared against `ComposioHQ/awesome-claude-skills` upstream; all 23 shared skills confirmed in sync (upstream unchanged since 2025-11-19). The remaining in-repo gaps (`connect`, `connect-apps`, `connect-apps-plugin`) are Composio-product-dependent and intentionally excluded.
+
 ## [1.1.0] - 2026-06-02
 
 ### ✨ New Skills
