@@ -1,0 +1,41 @@
+# scripts/branding-allowlist.txt
+#
+# Pre-commit branding exceptions for scripts/check_skills.sh
+#
+# Format per line:  <skill-dir>|<exact substring to allow>
+#
+# Purpose: some skills contain Claude/Anthropic strings that are FUNCTIONAL
+# code (SDK imports, default author names, CLI flags, external references),
+# not user-facing branding. Those are legitimate and may remain. Everything
+# else that matches "Claude|Anthropic|anthropic" is flagged by the check.
+#
+# NOTE: license/credit checks are ALWAYS enforced (hard gate); this file only
+# relaxes the branding notification (and is honored under --strict too).
+#
+# To revert a legacy rebrand later, remove the line and run the check.
+
+# --- mcp-builder: the evaluation harness genuinely calls the Anthropic SDK ---
+mcp-builder|from anthropic import Anthropic
+mcp-builder|Anthropic(
+mcp-builder|client: Anthropic,
+mcp-builder|anthropic>=
+mcp-builder|anthropic
+mcp-builder|against them using Claude.
+mcp-builder|model: str = "claude
+mcp-builder|default="claude-3-7-sonnet-20250219"
+mcp-builder|-m "
+# --- lean-ctx: native CLI flag for supported agents (--agent claude is real) ---
+lean-ctx|--agent claude
+# --- document-skills: tracked-change / comment author defaults are functional ---
+document-skills|author = "Claude
+document-skills|(default: "Claude
+document-skills|authored by Claude
+document-skills|by Claude
+document-skills|author: str = "Claude
+document-skills|author == "Claude
+document-skills|changes by Claude
+document-skills|"Claude"
+# --- artifacts-builder: references claude.ai artifact format it must stay compatible with ---
+artifacts-builder|artifact in Claude conversations
+# --- staff-engineer-review: keeps a Claude Code reference in review intake ---
+staff-engineer-review|Claude Code

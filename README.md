@@ -50,11 +50,22 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 ### Development & Code Tools
 
 - [artifacts-builder](./artifacts-builder/) - Suite of tools for creating elaborate, multi-component HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). 📄 **Standard**
+- [Brainstorming](./brainstorming/) - Explores user intent, requirements, and design before implementing creative work (use before any feature or component work). 📖 **Comprehensive**
 - [Changelog Generator](./changelog-generator/) - Automatically creates user-facing changelogs from git commits by analyzing history and transforming technical commits into customer-friendly release notes. 📄 **Standard**
+- [Finishing a Development Branch](./finishing-a-development-branch/) - Decide how to integrate completed work when implementation is done and all tests pass. 📄 **Standard**
+- [Git Pushing](./git-pushing/) - Stage, commit, and push git changes with conventional commit messages. 📄 **Standard**
+- [iOS Simulator](./ios-simulator-skill/) - 29 production-ready scripts for iOS app testing, building, and automation via the iOS Simulator. 📖 **Comprehensive**
 - [LangSmith Fetch](./langsmith-fetch/) - Debugs LangChain and LangGraph agents by fetching and analyzing execution traces from LangSmith Studio to investigate errors, tool calls, memory operations, and performance. 📖 **Comprehensive**
+- [lean-ctx](./lean-ctx/) - Context engineering for AI agents: MCP tools, read modes, shell patterns, and tree-sitter AST for compressed context. 📖 **Comprehensive**
 - [MCP Builder](./mcp-builder/) - Guides creation of high-quality MCP (Model Context Protocol) servers for integrating external APIs and services with LLMs using Python or TypeScript. 📖 **Comprehensive**
+- [Playwright Browser Automation](./playwright-skill/) - Complete browser automation with Playwright: test pages, fill forms, screenshots, responsive checks, and login flows. 📖 **Comprehensive**
 - [Skill Creator](./skill-creator/) - Provides guidance for creating effective OpenCode Skills that extend capabilities with specialized knowledge, workflows, and tool integrations. 📖 **Comprehensive**
+- [Skill Seekers](./skill-seekers/) - Automatically detect source types and build AI skills from documentation, repos, PDFs, videos, or other knowledge sources. 📄 **Standard**
+- [Review Implementing](./review-implementing/) - Process and implement code review feedback systematically. 📄 **Standard**
 - [Staff Engineer Review](./staff-engineer-review/) - Performs deep code review of pull requests as a Staff+ engineer, evaluating alignment, architecture, code quality, correctness, performance, and test coverage. 📄 **Standard**
+- [Test-Driven Development](./test-driven-development/) - Write tests before implementing any feature or bugfix (test-first workflow). 📄 **Standard**
+- [Test Fixing](./test-fixing/) - Run tests and systematically fix all failing tests using smart error grouping. 📄 **Standard**
+- [Using Git Worktrees](./using-git-worktrees/) - Create isolated git worktrees for feature work with smart directory selection and safety verification. 📄 **Standard**
 - [Webapp Testing](./webapp-testing/) - Tests local web applications using Playwright for verifying frontend functionality, debugging UI behavior, and capturing screenshots. 📄 **Standard**
 
 ### Data & Analysis
@@ -71,8 +82,10 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 
 ### Communication & Writing
 
+- [Article Extractor](./article-extractor/) - Extract clean article content from URLs and save as readable text without ads or clutter. 📄 **Standard**
 - [Content Research Writer](./content-research-writer/) - Assists in writing high-quality content by conducting research, adding citations, improving hooks, and providing section-by-section feedback. 📖 **Comprehensive**
 - [Meeting Insights Analyzer](./meeting-insights-analyzer/) - Analyzes meeting transcripts to uncover behavioral patterns including conflict avoidance, speaking ratios, filler words, and leadership style. 📖 **Comprehensive**
+- [Ship Learn Next](./ship-learn-next/) - Transform learning content (transcripts, articles, tutorials) into actionable implementation plans. 📄 **Standard**
 - [Twitter Algorithm Optimizer](./twitter-algorithm-optimizer/) - Analyzes and optimizes tweets for maximum reach and engagement using Twitter's open-source algorithm insights (Real-graph, SimClusters, TwHIN). 📖 **Comprehensive**
 - More skills coming soon!
 
@@ -83,6 +96,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 - [Slack GIF Creator](./slack-gif-creator/) - Creates animated GIFs optimized for Slack with validators for size constraints and composable animation primitives. 📖 **Comprehensive**
 - [Theme Factory](./theme-factory/) - Applies professional font and color themes to artifacts including slides, docs, reports, and HTML landing pages with 10 pre-set themes. 📄 **Standard**
 - [Video Downloader](./video-downloader/) - Downloads videos from YouTube and other platforms for offline viewing, editing, or archival with support for various formats and quality options. 📄 **Standard**
+- [YouTube Transcript](./youtube-transcript/) - Download YouTube video transcripts, captions, or subtitles directly. 📄 **Standard**
 - More skills coming soon!
 
 ### Productivity & Organization

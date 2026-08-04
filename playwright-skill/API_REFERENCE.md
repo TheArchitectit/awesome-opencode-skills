@@ -36,7 +36,7 @@ Before using this skill, ensure Playwright is available:
 npm list playwright 2>/dev/null || echo "Playwright not installed"
 
 # Install (if needed)
-cd ~/.claude/skills/playwright-skill
+cd ~/.config/opencode/skills/playwright-skill
 npm run setup
 ```
 
@@ -421,10 +421,12 @@ PW_EXTRA_HEADERS='{"X-Automated-By":"playwright-skill","X-Request-ID":"123"}'
 ```
 
 These headers are automatically applied to all requests when using:
+
 - `helpers.createContext(browser)` - headers merged automatically
 - `getContextOptionsWithHeaders(options)` - utility injected by run.js wrapper
 
 **Precedence (highest to lowest):**
+
 1. Headers passed directly in `options.extraHTTPHeaders`
 2. Environment variable headers
 3. Playwright defaults

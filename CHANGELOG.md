@@ -2,6 +2,28 @@
 
 All notable changes to the Awesome OpenCode Skills collection are documented here.
 
+## [1.3.0] - 2026-08-04
+
+### ✨ New Skills (14 vendored, >500★, free, permissive license)
+
+Vendored from popular standalone repos referenced by the `awesome-claude-skills` upstream, each carrying its own LICENSE for attribution (see `CREDITS.md`):
+
+- **Playwright Browser Automation** (`playwright-skill`) — 2,972★, MIT · Complete browser automation with Playwright
+- **Skill Seekers** (`skill-seekers`) — 14,687★, MIT · Auto-build skills from docs, repos, PDFs, videos
+- **lean-ctx** (`lean-ctx`) — 3,484★, Apache-2.0 · Context engineering / MCP context runtime
+- **iOS Simulator** (`ios-simulator-skill`) — 1,198★, MIT · 29 scripts for iOS app testing via simulator
+- **Superpowers** (obra/superpowers, MIT, 265,830★): `finishing-a-development-branch`, `using-git-worktrees`, `test-driven-development`, `brainstorming`
+- **Tapestry** (michalparkola/tapestry-skills-for-claude-code, MIT, 511★): `article-extractor`, `youtube-transcript`, `ship-learn-next`
+- **Claude Skills Marketplace** (mhattingpete/claude-skills-marketplace, Apache-2.0, 656★): `git-pushing`, `review-implementing`, `test-fixing`
+
+### 🔧 Improvements
+
+- **License/credit enforcement**: Added `scripts/check_skills.sh` — a pre-commit gate that verifies every skill has a LICENSE, valid SKILL.md frontmatter, no stale branding (allowlist-aware, `--strict` to gate), and that `skills.json` matches disk. Installed as a `pre-commit` git hook. Added `scripts/branding-allowlist.txt` for legitimate functional refs (Anthropic SDK imports, `author="Claude"` defaults, `--agent claude` CLI flag).
+- **Attribution manifest**: Added `CREDITS.md` documenting source repo + license + stars for every vendored skill.
+- **Skills registry**: Expanded `.opencode/skills.json` from 31 → 45 registered skills (version 1.2.0 → 1.3.0).
+- **Playwright rebrand**: Fixed supporting files (`API_REFERENCE.md`, `package.json`, `run.js`) missed in initial batch.
+- **Document skills**: Preserved original Anthropic proprietary LICENSE headers (not swapped to Apache).
+
 ## [1.2.0] - 2026-08-04
 
 ### ✨ New Skills

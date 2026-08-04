@@ -1,7 +1,7 @@
 {
   "name": "playwright-skill",
   "version": "4.1.0",
-  "description": "General-purpose browser automation with Playwright for Claude Code with auto-detection and smart test management",
+  "description": "General-purpose browser automation with Playwright for OpenCode with auto-detection and smart test management",
   "author": "lackeyjb",
   "main": "run.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "automation",
     "browser-testing",
     "web-automation",
-    "claude-skill",
+    "opencode-skill",
     "general-purpose"
   ],
   "dependencies": {

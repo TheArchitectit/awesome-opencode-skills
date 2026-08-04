@@ -1,9 +1,69 @@
 {
   "$schema": "https://opencode.ai/skills.schema.json",
   "name": "awesome-opencode-skills",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A curated collection of practical OpenCode Skills for enhancing productivity",
   "skills": [
+    {
+      "name": "article-extractor",
+      "path": "./article-extractor",
+      "category": "communication-writing",
+      "description": "Extract clean article content from URLs and save as readable text"
+    },
+    {
+      "name": "artifacts-builder",
+      "path": "./artifacts-builder",
+      "category": "development",
+      "description": "Build HTML artifacts with React, Tailwind CSS, and shadcn/ui"
+    },
+    {
+      "name": "brainstorming",
+      "path": "./brainstorming",
+      "category": "development",
+      "description": "Explore user intent, requirements, and design before implementing creative work"
+    },
+    {
+      "name": "brand-guidelines",
+      "path": "./brand-guidelines",
+      "category": "business-marketing",
+      "description": "Apply OpenCode branding to artifacts"
+    },
+    {
+      "name": "canvas-design",
+      "path": "./canvas-design",
+      "category": "creative-media",
+      "description": "Create visual art in PNG and PDF documents using design philosophy"
+    },
+    {
+      "name": "changelog-generator",
+      "path": "./changelog-generator",
+      "category": "development",
+      "description": "Generate changelogs from git commits"
+    },
+    {
+      "name": "code-security-auditor",
+      "path": "./code-security-auditor",
+      "category": "security-systems",
+      "description": "Pre-execution security audits of untrusted codebases via static analysis"
+    },
+    {
+      "name": "competitive-ads-extractor",
+      "path": "./competitive-ads-extractor",
+      "category": "business-marketing",
+      "description": "Extract and analyze competitor advertisements from ad libraries"
+    },
+    {
+      "name": "content-research-writer",
+      "path": "./content-research-writer",
+      "category": "communication-writing",
+      "description": "Research and write high-quality content with citations and feedback"
+    },
+    {
+      "name": "developer-growth-analysis",
+      "path": "./developer-growth-analysis",
+      "category": "development",
+      "description": "Analyze coding patterns and curate personalized growth reports"
+    },
     {
       "name": "document-skills-docx",
       "path": "./document-skills/docx",
@@ -29,130 +89,10 @@
       "description": "Skills for working with Excel spreadsheets"
     },
     {
-      "name": "artifacts-builder",
-      "path": "./artifacts-builder",
-      "category": "development",
-      "description": "Build HTML artifacts with React, Tailwind CSS, and shadcn/ui"
-    },
-    {
-      "name": "changelog-generator",
-      "path": "./changelog-generator",
-      "category": "development",
-      "description": "Generate changelogs from git commits"
-    },
-    {
-      "name": "webapp-testing",
-      "path": "./webapp-testing",
-      "category": "development",
-      "description": "Test web applications using Playwright"
-    },
-    {
-      "name": "developer-growth-analysis",
-      "path": "./developer-growth-analysis",
-      "category": "development",
-      "description": "Analyze coding patterns and curate personalized growth reports"
-    },
-    {
-      "name": "mcp-builder",
-      "path": "./mcp-builder",
-      "category": "development",
-      "description": "Create MCP servers for integrating external APIs and services with LLMs"
-    },
-    {
-      "name": "skill-creator",
-      "path": "./skill-creator",
-      "category": "development",
-      "description": "Guide for creating effective OpenCode Skills"
-    },
-    {
-      "name": "staff-engineer-review",
-      "path": "./staff-engineer-review",
-      "category": "development",
-      "description": "Deep code review of pull requests as a Staff+ engineer"
-    },
-    {
-      "name": "langsmith-fetch",
-      "path": "./langsmith-fetch",
-      "category": "development",
-      "description": "Debug LangChain and LangGraph agents by fetching and analyzing LangSmith execution traces"
-    },
-    {
-      "name": "brand-guidelines",
-      "path": "./brand-guidelines",
-      "category": "business-marketing",
-      "description": "Apply OpenCode branding to artifacts"
-    },
-    {
-      "name": "competitive-ads-extractor",
-      "path": "./competitive-ads-extractor",
-      "category": "business-marketing",
-      "description": "Extract and analyze competitor advertisements from ad libraries"
-    },
-    {
       "name": "domain-name-brainstormer",
       "path": "./domain-name-brainstormer",
       "category": "business-marketing",
       "description": "Generate domain name ideas and check availability across TLDs"
-    },
-    {
-      "name": "internal-comms",
-      "path": "./internal-comms",
-      "category": "business-marketing",
-      "description": "Write internal communications using company-specific formats"
-    },
-    {
-      "name": "lead-research-assistant",
-      "path": "./lead-research-assistant",
-      "category": "business-marketing",
-      "description": "Identify and qualify high-quality leads for your product or service"
-    },
-    {
-      "name": "content-research-writer",
-      "path": "./content-research-writer",
-      "category": "communication-writing",
-      "description": "Research and write high-quality content with citations and feedback"
-    },
-    {
-      "name": "meeting-insights-analyzer",
-      "path": "./meeting-insights-analyzer",
-      "category": "communication-writing",
-      "description": "Analyze meeting transcripts for behavioral patterns and insights"
-    },
-    {
-      "name": "twitter-algorithm-optimizer",
-      "path": "./twitter-algorithm-optimizer",
-      "category": "communication-writing",
-      "description": "Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights"
-    },
-    {
-      "name": "canvas-design",
-      "path": "./canvas-design",
-      "category": "creative-media",
-      "description": "Create visual art in PNG and PDF documents using design philosophy"
-    },
-    {
-      "name": "image-enhancer",
-      "path": "./image-enhancer",
-      "category": "creative-media",
-      "description": "Enhance image quality by improving resolution, sharpness, and clarity"
-    },
-    {
-      "name": "slack-gif-creator",
-      "path": "./slack-gif-creator",
-      "category": "creative-media",
-      "description": "Create animated GIFs optimized for Slack"
-    },
-    {
-      "name": "theme-factory",
-      "path": "./theme-factory",
-      "category": "creative-media",
-      "description": "Apply professional themes to artifacts with 10 pre-set themes"
-    },
-    {
-      "name": "video-downloader",
-      "path": "./video-downloader",
-      "category": "creative-media",
-      "description": "Download videos from YouTube and other platforms"
     },
     {
       "name": "file-organizer",
@@ -161,10 +101,76 @@
       "description": "Intelligently organize files and folders with deduplication and cleanup"
     },
     {
+      "name": "finishing-a-development-branch",
+      "path": "./finishing-a-development-branch",
+      "category": "development",
+      "description": "Decide how to integrate completed work when implementation is done and tests pass"
+    },
+    {
+      "name": "git-pushing",
+      "path": "./git-pushing",
+      "category": "development",
+      "description": "Stage, commit, and push git changes with conventional commit messages"
+    },
+    {
+      "name": "image-enhancer",
+      "path": "./image-enhancer",
+      "category": "creative-media",
+      "description": "Enhance image quality by improving resolution, sharpness, and clarity"
+    },
+    {
+      "name": "internal-comms",
+      "path": "./internal-comms",
+      "category": "business-marketing",
+      "description": "Write internal communications using company-specific formats"
+    },
+    {
       "name": "invoice-organizer",
       "path": "./invoice-organizer",
       "category": "productivity-organization",
       "description": "Organize invoices and receipts for tax preparation"
+    },
+    {
+      "name": "ios-simulator-skill",
+      "path": "./ios-simulator-skill",
+      "category": "development",
+      "description": "29 production-ready scripts for iOS app testing, building, and automation via the iOS Simulator"
+    },
+    {
+      "name": "langsmith-fetch",
+      "path": "./langsmith-fetch",
+      "category": "development",
+      "description": "Debug LangChain and LangGraph agents by fetching and analyzing LangSmith execution traces"
+    },
+    {
+      "name": "lead-research-assistant",
+      "path": "./lead-research-assistant",
+      "category": "business-marketing",
+      "description": "Identify and qualify high-quality leads for your product or service"
+    },
+    {
+      "name": "lean-ctx",
+      "path": "./lean-ctx",
+      "category": "development",
+      "description": "Context engineering for AI agents: 82 MCP tools, 10 read modes, 95+ shell patterns, tree-sitter AST"
+    },
+    {
+      "name": "mcp-builder",
+      "path": "./mcp-builder",
+      "category": "development",
+      "description": "Create MCP servers for integrating external APIs and services with LLMs"
+    },
+    {
+      "name": "meeting-insights-analyzer",
+      "path": "./meeting-insights-analyzer",
+      "category": "communication-writing",
+      "description": "Analyze meeting transcripts for behavioral patterns and insights"
+    },
+    {
+      "name": "playwright-skill",
+      "path": "./playwright-skill",
+      "category": "development",
+      "description": "Complete browser automation with Playwright: test pages, fill forms, screenshots, responsive checks, login flows"
     },
     {
       "name": "raffle-winner-picker",
@@ -173,10 +179,28 @@
       "description": "Randomly select winners from lists with cryptographically secure randomness"
     },
     {
-      "name": "tailored-resume-generator",
-      "path": "./tailored-resume-generator",
-      "category": "productivity-organization",
-      "description": "Analyze job descriptions and generate tailored resumes highlighting relevant experience"
+      "name": "review-implementing",
+      "path": "./review-implementing",
+      "category": "development",
+      "description": "Process and implement code review feedback systematically"
+    },
+    {
+      "name": "ship-learn-next",
+      "path": "./ship-learn-next",
+      "category": "communication-writing",
+      "description": "Transform learning content into actionable implementation plans"
+    },
+    {
+      "name": "skill-creator",
+      "path": "./skill-creator",
+      "category": "development",
+      "description": "Guide for creating effective OpenCode Skills"
+    },
+    {
+      "name": "skill-seekers",
+      "path": "./skill-seekers",
+      "category": "development",
+      "description": "Automatically detect source types and build AI skills from documentation, repos, PDFs, videos"
     },
     {
       "name": "skill-share",
@@ -185,10 +209,70 @@
       "description": "Create and share OpenCode skills on Slack for team collaboration"
     },
     {
-      "name": "code-security-auditor",
-      "path": "./code-security-auditor",
-      "category": "security-systems",
-      "description": "Pre-execution security audits of untrusted codebases via static analysis"
+      "name": "slack-gif-creator",
+      "path": "./slack-gif-creator",
+      "category": "creative-media",
+      "description": "Create animated GIFs optimized for Slack"
+    },
+    {
+      "name": "staff-engineer-review",
+      "path": "./staff-engineer-review",
+      "category": "development",
+      "description": "Deep code review of pull requests as a Staff+ engineer"
+    },
+    {
+      "name": "tailored-resume-generator",
+      "path": "./tailored-resume-generator",
+      "category": "productivity-organization",
+      "description": "Analyze job descriptions and generate tailored resumes highlighting relevant experience"
+    },
+    {
+      "name": "test-driven-development",
+      "path": "./test-driven-development",
+      "category": "development",
+      "description": "Write tests first when implementing any feature or bugfix"
+    },
+    {
+      "name": "test-fixing",
+      "path": "./test-fixing",
+      "category": "development",
+      "description": "Run tests and systematically fix all failing tests using smart error grouping"
+    },
+    {
+      "name": "theme-factory",
+      "path": "./theme-factory",
+      "category": "creative-media",
+      "description": "Apply professional themes to artifacts with 10 pre-set themes"
+    },
+    {
+      "name": "twitter-algorithm-optimizer",
+      "path": "./twitter-algorithm-optimizer",
+      "category": "communication-writing",
+      "description": "Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights"
+    },
+    {
+      "name": "using-git-worktrees",
+      "path": "./using-git-worktrees",
+      "category": "development",
+      "description": "Create isolated git worktrees for feature work with safety verification"
+    },
+    {
+      "name": "video-downloader",
+      "path": "./video-downloader",
+      "category": "creative-media",
+      "description": "Download videos from YouTube and other platforms"
+    },
+    {
+      "name": "webapp-testing",
+      "path": "./webapp-testing",
+      "category": "development",
+      "description": "Test web applications using Playwright"
+    },
+    {
+      "name": "youtube-transcript",
+      "path": "./youtube-transcript",
+      "category": "creative-media",
+      "description": "Download YouTube video transcripts, captions, or subtitles"
     }
   ]
 }
