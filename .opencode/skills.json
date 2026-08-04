@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/skills.schema.json",
   "name": "awesome-opencode-skills",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A curated collection of practical OpenCode Skills for enhancing productivity",
   "skills": [
     {
@@ -71,6 +71,12 @@
       "description": "Deep code review of pull requests as a Staff+ engineer"
     },
     {
+      "name": "langsmith-fetch",
+      "path": "./langsmith-fetch",
+      "category": "development",
+      "description": "Debug LangChain and LangGraph agents by fetching and analyzing LangSmith execution traces"
+    },
+    {
       "name": "brand-guidelines",
       "path": "./brand-guidelines",
       "category": "business-marketing",
@@ -111,6 +117,12 @@
       "path": "./meeting-insights-analyzer",
       "category": "communication-writing",
       "description": "Analyze meeting transcripts for behavioral patterns and insights"
+    },
+    {
+      "name": "twitter-algorithm-optimizer",
+      "path": "./twitter-algorithm-optimizer",
+      "category": "communication-writing",
+      "description": "Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights"
     },
     {
       "name": "canvas-design",
@@ -159,6 +171,12 @@
       "path": "./raffle-winner-picker",
       "category": "productivity-organization",
       "description": "Randomly select winners from lists with cryptographically secure randomness"
+    },
+    {
+      "name": "tailored-resume-generator",
+      "path": "./tailored-resume-generator",
+      "category": "productivity-organization",
+      "description": "Analyze job descriptions and generate tailored resumes highlighting relevant experience"
     },
     {
       "name": "skill-share",
