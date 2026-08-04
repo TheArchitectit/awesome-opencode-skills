@@ -51,6 +51,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 
 - [artifacts-builder](./artifacts-builder/) - Suite of tools for creating elaborate, multi-component HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). 📄 **Standard**
 - [Changelog Generator](./changelog-generator/) - Automatically creates user-facing changelogs from git commits by analyzing history and transforming technical commits into customer-friendly release notes. 📄 **Standard**
+- [LangSmith Fetch](./langsmith-fetch/) - Debugs LangChain and LangGraph agents by fetching and analyzing execution traces from LangSmith Studio to investigate errors, tool calls, memory operations, and performance. 📖 **Comprehensive**
 - [MCP Builder](./mcp-builder/) - Guides creation of high-quality MCP (Model Context Protocol) servers for integrating external APIs and services with LLMs using Python or TypeScript. 📖 **Comprehensive**
 - [Skill Creator](./skill-creator/) - Provides guidance for creating effective OpenCode Skills that extend capabilities with specialized knowledge, workflows, and tool integrations. 📖 **Comprehensive**
 - [Staff Engineer Review](./staff-engineer-review/) - Performs deep code review of pull requests as a Staff+ engineer, evaluating alignment, architecture, code quality, correctness, performance, and test coverage. 📄 **Standard**
@@ -72,6 +73,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 
 - [Content Research Writer](./content-research-writer/) - Assists in writing high-quality content by conducting research, adding citations, improving hooks, and providing section-by-section feedback. 📖 **Comprehensive**
 - [Meeting Insights Analyzer](./meeting-insights-analyzer/) - Analyzes meeting transcripts to uncover behavioral patterns including conflict avoidance, speaking ratios, filler words, and leadership style. 📖 **Comprehensive**
+- [Twitter Algorithm Optimizer](./twitter-algorithm-optimizer/) - Analyzes and optimizes tweets for maximum reach and engagement using Twitter's open-source algorithm insights (Real-graph, SimClusters, TwHIN). 📖 **Comprehensive**
 - More skills coming soon!
 
 ### Creative & Media
@@ -88,6 +90,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 - [File Organizer](./file-organizer/) - Intelligently organizes files and folders by understanding context, finding duplicates, suggesting better organizational structures, and automating cleanup tasks. 📖 **Comprehensive**
 - [Invoice Organizer](./invoice-organizer/) - Automatically organizes invoices and receipts for tax preparation by reading files, extracting information, and renaming consistently. 📖 **Comprehensive**
 - [Raffle Winner Picker](./raffle-winner-picker/) - Randomly selects winners from lists, spreadsheets, or Google Sheets for giveaways and contests with cryptographically secure randomness. 📄 **Standard**
+- [Tailored Resume Generator](./tailored-resume-generator/) - Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances. 📖 **Comprehensive**
 - More skills coming soon!
 
 ### Collaboration & Project Management
@@ -113,6 +116,7 @@ Skills are categorized by documentation depth:
 #### Global Installation
 
 1. Install skills to your global OpenCode directory:
+
    ```bash
    # Using the official plural path (recommended)
    mkdir -p ~/.config/opencode/skills/
@@ -124,11 +128,13 @@ Skills are categorized by documentation depth:
    ```
 
    Or use the helper script:
+
    ```bash
    ./scripts/install_opencode_skills.sh --global
    ```
 
 2. Start OpenCode:
+
    ```bash
    opencode
    ```
@@ -138,6 +144,7 @@ Skills are categorized by documentation depth:
 #### Project-Local Installation
 
 1. Install skills to your project directory:
+
    ```bash
    # Using the official plural path (recommended)
    mkdir -p .opencode/skills/
@@ -149,17 +156,19 @@ Skills are categorized by documentation depth:
    ```
 
    Or use the helper script:
+
    ```bash
    ./scripts/install_opencode_skills.sh --project
    ```
 
 2. Start OpenCode in your project:
+
    ```bash
    cd /path/to/project
    opencode
    ```
 
- 3. Skills are discovered from `.opencode/skill/` directories.
+3. Skills are discovered from `.opencode/skill/` directories.
 
 ### MCP Server for Skill Management 🚀
 
@@ -172,6 +181,7 @@ Skills are categorized by documentation depth:
 ### Step 1: Choose Your Runtime
 
 #### TypeScript/Node.js (Recommended)
+
 - Faster startup (~20ms with bun, ~50ms with node)
 - Smaller memory footprint (~35MB)
 - Modern npm/bun ecosystem
@@ -190,6 +200,7 @@ bun install && bun run build
 ```
 
 #### Python
+
 - Mature PyPI ecosystem
 - Familiar Python patterns
 - Comprehensive logging to file + console
@@ -265,6 +276,7 @@ Add the MCP server to your OpenCode config file. The config location depends on 
 ```
 
 **Tips for paths:**
+
 - Use absolute paths (e.g., `/home/user/...` or `C:\Users\...`)
 - Or use home expansion with `{env:HOME}` on Linux/macOS
 - Make sure the path matches your chosen runtime (TypeScript needs `dist/index.js`, Python can use module import)
@@ -338,6 +350,7 @@ Your config supports additional options for customization:
 ```
 
 **Available options:**
+
 - `enabled` - Enable or disable the server (default: `true`)
 - `timeout` - Timeout in ms for loading tools (default: `5000`)
 - `environment` - Environment variables for the server (e.g., custom skills path)
@@ -418,7 +431,7 @@ If you use multiple agents, you can enable the MCP server per-agent instead of g
 ## Available MCP Tools
 
 | Tool | Description | Example |
-|------|-------------|---------|
+| ------ | ------------- | --------- |
 | `list_skills` | Browse all skills with filters | `list_skills with category "Development"` |
 | `get_skill_info` | View detailed skill information | `get_skill_info for skill "content-research-writer"` |
 | `install_skill` | Install skills globally/locally | `install_skill with skill_name "file-organizer"` |
@@ -453,6 +466,7 @@ If you use multiple agents, you can enable the MCP server per-agent instead of g
 3. **Verify skill directory** exists in your awesome-opencode-skills repository
 
 **MCP Tools Available:**
+
 - `list_skills` - Browse all skills with filters
 - `get_skill_info` - View detailed skill information
 - `install_skill` - Install skills globally/locally
@@ -463,6 +477,7 @@ If you use multiple agents, you can enable the MCP server per-agent instead of g
 - `install_workflow` - One-command workflow installation
 
 **See full documentation:**
+
 - TypeScript: [opencode-skills-mcp-server-ts/README.md](./opencode-skills-mcp-server-ts/README.md)
 - Python: [opencode-skills-mcp-server/README.md](./opencode-skills-mcp-server/README.md)
 
@@ -568,6 +583,6 @@ Individual skills may have different licenses - please check each skill's folder
 Help keep this project going — use a referral link below and both of us get credits!
 
 | Service | Your Bonus | Details | Referral Code |
-|---------|-----------|---------|---------------|
+| --------- | ----------- | --------- | --------------- |
 | [**Neuralwatt**](https://portal.neuralwatt.com/auth/register?ref=NW-ROGER-ET3Y) | $10 in credits | Spend $10+ → you get $10, we get $20 | `NW-ROGER-ET3Y` |
 | [**Synthetic**](https://synthetic.new/?referral=UAWqkKQQLFkzMkY) | $10 in credits | Subscribe → both get $10 credit | `UAWqkKQQLFkzMkY` |
