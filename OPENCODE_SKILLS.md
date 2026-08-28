@@ -40,6 +40,7 @@ This document provides an index of all available OpenCode skills in this reposit
 - `skill-creator` - Guide for creating new skills
 - `webapp-testing` - Test web apps with Playwright
 - `alibaba-java-coding-guidelines-en` - Enforce Alibaba Java coding standards (English edition, 181 rules)
+- `alibaba-java-coding-guidelines-en` - Enforce Alibaba Java coding standards (English edition, 181 rules)
 
 ### Business & Marketing
 - `brand-guidelines` - Apply OpenCode branding to artifacts
