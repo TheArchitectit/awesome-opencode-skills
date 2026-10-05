@@ -67,6 +67,7 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 - [Test Fixing](./test-fixing/) - Run tests and systematically fix all failing tests using smart error grouping. 📄 **Standard**
 - [Using Git Worktrees](./using-git-worktrees/) - Create isolated git worktrees for feature work with smart directory selection and safety verification. 📄 **Standard**
 - [Webapp Testing](./webapp-testing/) - Tests local web applications using Playwright for verifying frontend functionality, debugging UI behavior, and capturing screenshots. 📄 **Standard**
+- [Alibaba Java Coding Guidelines](./alibaba-java-coding-guidelines/) - Enforces the Alibaba Java Development Manual (Huangshan v1.7.1) for Java coding self-checks and standards-aligned reviews, with a full manual and per-chapter review checklist. 📄 **Standard**
 
 ### Data & Analysis
 
