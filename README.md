@@ -72,6 +72,8 @@ OpenCode Skills are customizable workflows that teach OpenCode how to perform sp
 
 - [Developer Growth Analysis](./developer-growth-analysis/) - Analyzes your recent OpenCode chat history to identify coding patterns, development gaps, and areas for improvement, curates learning resources from HackerNews, and sends personalized growth reports. 📖 **Comprehensive**
 
+- [Government Tenders and Grants](./gov-tenders-and-grants/) - Looks up official US federal contracts and grants, UK and EU tenders, and Legistar city council meetings through Public Records Apify Actors, using the user's own Apify account. 📖 **Comprehensive**
+
 ### Business & Marketing
 
 - [Brand Guidelines](./brand-guidelines/) - Applies OpenCode's official brand colors and typography to artifacts for consistent visual identity and professional design standards. 📄 **Standard**
